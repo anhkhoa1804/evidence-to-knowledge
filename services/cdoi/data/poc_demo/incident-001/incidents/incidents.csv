@@ -1,0 +1,2 @@
+incident_id,start_time,end_time,affected_service_ids,environment,summary,source
+inc-001,2026-09-18T09:50:00Z,2026-09-18T10:10:00Z,payment-service,staging,Payment request failures,USER_DECLARED_INCIDENT_CSV

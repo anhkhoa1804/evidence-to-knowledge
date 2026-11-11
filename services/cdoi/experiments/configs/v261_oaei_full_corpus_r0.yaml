@@ -1,0 +1,10 @@
+experiment_id: OAEI_FULL_CORPUS_R0_EXACT_LEXICAL
+dataset: oaei_anatomy
+task: oaei_full_corpus
+baseline: B0_LEXICAL
+external_root: data/benchmarks/external/oaei/anatomy-2026
+thresholds:
+  emit_threshold: 1.0
+model_config:
+  retrieval_method: R0_EXACT_NORMALIZED_LEXICAL
+  top_k: 20

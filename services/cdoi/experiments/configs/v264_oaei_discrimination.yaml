@@ -1,0 +1,14 @@
+experiment_id: V264_GOLD_HARD_NEGATIVE_AND_PAIRWISE_DIAGNOSTIC
+dataset: oaei_anatomy
+task: oaei_discrimination
+baseline: B0_LEXICAL
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_PERSISTED_TOPK_DISCRIMINATION_V1
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  candidate_k: 20
+  k_values: [5, 10]
+  feature_mode: existing_R1_R2_profile_components
+  pairwise_rule: component_majority_then_retrieval_rank_then_id
+  reference_usage: evaluation_labels_after_scoring

@@ -1,0 +1,8 @@
+[
+  {"case_id":"dev_account","kind":"class","source_domain":"finance","candidate":"BankAccount","target_domain":"distributed_systems","target":"UserAccount","expected_relation":"UNRESOLVED","must_not_equivalent":true,"context_relation":"UNRESOLVED","signals":{"lexical":0.78,"embedding":0.82,"structural":0.08,"domain":0.05}},
+  {"case_id":"dev_pod","kind":"class","source_domain":"distributed_systems","candidate":"KubernetesPod","target":"RuntimeEnvironment","expected_relation":"SUBCLASS_OF","context_relation":"SUBCLASS_OF","signals":{"lexical":0.24,"embedding":0.48,"structural":0.92,"domain":0.88}},
+  {"case_id":"dev_new","kind":"class","source_domain":"logistics","candidate":"ColdChainCheckpoint","target":null,"expected_relation":"NEW_CONCEPT","context_relation":"NEW_CONCEPT","signals":{"lexical":0.10,"embedding":0.16,"structural":0.18,"domain":0.45}},
+  {"case_id":"dev_bridge","kind":"bridge","source_domain":"commerce","candidate":"CommerceOrder","target":"Shipment","expected_relation":"BRIDGE","signals":{"lexical":0.18,"embedding":0.38,"structural":0.80,"domain":0.75}},
+  {"case_id":"dev_role","kind":"class","source_domain":"commerce","candidate":"CustomerRole","target":"PartyRole","expected_relation":"SUBCLASS_OF","context_relation":"SUBCLASS_OF","signals":{"lexical":0.55,"embedding":0.71,"structural":0.89,"domain":0.92}},
+  {"case_id":"dev_property","kind":"object_property","source_domain":"commerce","candidate":"fulfilledBy","target":"fulfilledBy","expected_relation":"EQUIVALENT","signals":{"lexical":1.0,"embedding":1.0,"structural":0.70,"domain":0.75}}
+]

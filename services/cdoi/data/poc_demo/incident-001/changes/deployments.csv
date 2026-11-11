@@ -1,0 +1,7 @@
+change_id,timestamp,service_id,change_type,version_before,version_after,description,environment,config_key,config_before,config_after,rollback_of
+chg-001,2026-09-18T09:55:00Z,payment-service,deployment,1.4.2,1.5.0,Deploy payment service 1.5.0,staging,,,,
+chg-002,2026-09-18T09:57:00Z,order-service,config_change,,,Enable retry,staging,retry_enabled,false,true,
+chg-003,2026-09-18T10:20:00Z,payment-service,rollback,1.5.0,1.4.2,Rollback deployment,staging,,,,chg-001
+chg-004,2026-09-18T10:30:00Z,unknown-service,restart,,,Restart unknown service,staging,,,,
+chg-005,not-a-time,payment-service,deployment,1.5.0,1.5.1,Invalid time,staging,,,,
+chg-006,2026-09-18T10:40:00Z,payment-service,unknown_type,,,Invalid type,staging,,,,

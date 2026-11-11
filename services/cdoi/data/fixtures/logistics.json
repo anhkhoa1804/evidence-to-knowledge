@@ -1,0 +1,9 @@
+{
+  "source_system": "warehouse-management",
+  "concepts": [
+    {"id": "shipment-1007", "label": "Shipment", "type_hint": "shipment", "definition": "A consignment fulfilling a commerce order.", "relations": ["deliversTo(Settlement)"]},
+    {"id": "log-settlement", "label": "Settlement", "type_hint": "place", "definition": "A named populated place used as a delivery destination.", "relations": ["destinationFor(Shipment)"]},
+    {"id": "receiver-role", "label": "Receiver Role", "type_hint": "party role", "definition": "A role held by an external party receiving a shipment.", "relations": ["receives(Shipment)"]},
+    {"id": "cold-chain", "label": "Cold Chain Checkpoint", "type_hint": "observation", "definition": "A temperature-controlled checkpoint recorded during shipment handling.", "relations": ["observes(Parcel)"]}
+  ]
+}

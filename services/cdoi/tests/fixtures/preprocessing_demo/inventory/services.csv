@@ -1,0 +1,5 @@
+service_id,name,description,owner,environment
+payment-service,Payment Service,Handles payment requests,payments,staging
+order-service,Order Service,Processes customer orders,commerce,staging
+database-service,Database Service,Stores transactional data,platform,staging
+payment-service,Duplicate Payment,Must be rejected,payments,staging

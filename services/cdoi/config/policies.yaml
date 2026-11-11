@@ -1,0 +1,5 @@
+equivalence_threshold: 0.92
+subclass_threshold: 0.72
+cross_domain_equivalence: review
+foundation_mutation: reject
+promotion_min_domains: 3

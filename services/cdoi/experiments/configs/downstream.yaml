@@ -1,0 +1,7 @@
+experiment_id: downstream_controlled
+dataset: cdoi_bench
+task: downstream
+baseline: B6_FULL_CDOI
+features:
+  bridge_stage: true
+random_seed: 42

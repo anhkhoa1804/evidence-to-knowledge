@@ -1,0 +1,11 @@
+@prefix ds: <https://example.org/vt/distributed-systems/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ds:Ontology a owl:Ontology .
+ds:RuntimeEnvironment a owl:Class ; rdfs:label "Runtime Environment" ; rdfs:comment "A computing environment that hosts executable workloads." .
+ds:SoftwareService a owl:Class ; rdfs:label "Software Service" .
+ds:ComputeResource a owl:Class ; rdfs:label "Compute Resource" .
+ds:Database a owl:Class ; rdfs:label "Database" .
+ds:Node a owl:Class ; rdfs:label "Node" .
+ds:Container a owl:Class ; rdfs:label "Container" .

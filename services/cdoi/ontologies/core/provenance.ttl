@@ -1,0 +1,6 @@
+@prefix core: <https://example.org/vt/core/provenance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+core:Ontology a owl:Ontology ; rdfs:label "Reusable provenance module" .
+core:SourceEvidence a owl:Class ; rdfs:label "Source Evidence" .

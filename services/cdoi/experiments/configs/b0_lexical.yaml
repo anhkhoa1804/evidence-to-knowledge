@@ -1,0 +1,13 @@
+experiment_id: b0_lexical
+dataset: cdoi_bench
+task: ontology_alignment
+baseline: B0_LEXICAL
+features:
+  lexical: true
+  relation_signature: false
+  domain_context: false
+  bridge_stage: false
+  conservative_policy: false
+  promotion: false
+random_seed: 42
+evaluation_metrics: [alignment_accuracy, false_merge_rate, equivalence_precision]

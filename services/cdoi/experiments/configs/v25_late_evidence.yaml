@@ -1,0 +1,5 @@
+experiment_id: CDOI_LATE_EVIDENCE
+dataset: cdoi_late_evidence
+task: late_evidence
+baseline: B6_FULL_CDOI
+random_seed: 42

@@ -1,0 +1,17 @@
+experiment_id: V266_QWEN_ORDER_ROBUSTNESS
+dataset: oaei_anatomy
+task: oaei_qwen_robustness
+random_seed: 266
+model_config:
+  protocol: OAEI_QWEN_ORDER_ROBUSTNESS_V1
+  validation_artifact: V265_QWEN_SEMANTIC_VALIDATION
+  top_k: 10
+  sample_size: 30
+  seed: 266
+  max_attempts: 2
+  response_budget: 512
+  conditions:
+    - {condition_id: ORDER_ORIGINAL, family: order, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}
+    - {condition_id: ORDER_REVERSE, family: order, order_kind: REVERSE, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}
+    - {condition_id: ORDER_SEED_A, family: order, order_kind: SEEDED_A, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}
+    - {condition_id: ORDER_SEED_B, family: order, order_kind: SEEDED_B, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}

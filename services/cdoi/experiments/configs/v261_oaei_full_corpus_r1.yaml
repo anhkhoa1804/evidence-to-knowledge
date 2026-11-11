@@ -1,0 +1,10 @@
+experiment_id: OAEI_FULL_CORPUS_R1_FUZZY_LEXICAL
+dataset: oaei_anatomy
+task: oaei_full_corpus
+baseline: B0_LEXICAL
+external_root: data/benchmarks/external/oaei/anatomy-2026
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  retrieval_method: R1_FUZZY_LEXICAL
+  top_k: 20

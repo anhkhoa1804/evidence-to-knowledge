@@ -1,0 +1,13 @@
+experiment_id: b1_embedding
+dataset: cdoi_bench
+task: ontology_alignment
+baseline: B1_EMBEDDING
+features:
+  lexical: false
+  relation_signature: false
+  domain_context: false
+  bridge_stage: false
+  conservative_policy: false
+  promotion: false
+random_seed: 42
+evaluation_metrics: [alignment_accuracy, false_merge_rate]

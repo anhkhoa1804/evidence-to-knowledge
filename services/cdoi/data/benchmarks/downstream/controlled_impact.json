@@ -1,0 +1,11 @@
+{
+  "data_type": "synthetic_controlled",
+  "impact_gold": ["payment-service", "checkout-process", "order-91", "shipment-91", "customer-7"],
+  "variants": {
+    "raw_native": [["incident-17", "payment-service"]],
+    "extracted_graph": [["incident-17", "payment-service"], ["payment-service", "checkout-process"]],
+    "domain_aligned": [["incident-17", "payment-service"], ["payment-service", "checkout-process"], ["checkout-process", "order-91"]],
+    "full_cdoi": [["incident-17", "payment-service"], ["payment-service", "checkout-process"], ["checkout-process", "order-91"], ["order-91", "shipment-91"], ["order-91", "customer-7"]],
+    "full_without_bridge": [["incident-17", "payment-service"], ["payment-service", "checkout-process"], ["checkout-process", "order-91"]]
+  }
+}

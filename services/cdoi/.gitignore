@@ -1,0 +1,54 @@
+# Python environments, build artifacts, and test caches
+.venv/
+.venv_*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+pytest-cache-files-*/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local configuration and credentials. Commit .env.example instead.
+.env
+.env.local
+.env.*
+!.env.example
+
+# Local runtime output and downloaded model data
+data/model_cache/
+data/integration_runs/
+data/outputs/
+data/ontology_versions/
+experiments/outputs/
+.test-runtime/
+.*-test-runtime/
+
+# Downloaded/licensed external benchmark corpora and their derived indexes.
+# Setup instructions remain versioned in data/benchmarks/external/README.md.
+data/benchmarks/external/oaei/
+data/benchmarks/external/oet/
+data/benchmarks/external/rcaeval/
+data/benchmarks/external/dh/
+
+# Local benchmark checkout and generated experiment archives.
+# Keep reports/manifests outside these paths versioned; archives contain
+# large SQLite stores, raw traces, and other reproducible run outputs.
+data/benchmarks/external/stw_thesoz_*/
+experiments/archive/
+
+# Locally cloned upstream research repositories; see research/UPSTREAM_NOTES.md.
+research/upstream/
+
+# Editor and operating-system metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+# External evaluation corpora are locally acquired and may carry source-specific
+# redistribution terms. Keep raw data out of Git; retain manifests and case IDs.
+/data/external_eval/*/RAW/

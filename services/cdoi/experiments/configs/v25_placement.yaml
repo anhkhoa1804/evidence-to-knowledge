@@ -1,0 +1,6 @@
+experiment_id: OET_B0
+dataset: oet
+task: concept_placement
+baseline: B0_LEXICAL
+external_root: data/benchmarks/external/oet
+random_seed: 42

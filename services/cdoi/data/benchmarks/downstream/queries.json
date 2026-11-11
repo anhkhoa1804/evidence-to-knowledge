@@ -1,0 +1,22 @@
+[
+  {"id":"q01","query":"Services affected by incident 17","expected":["payment-service"]},
+  {"id":"q02","query":"Orders affected by incident 17","expected":["order-91"]},
+  {"id":"q03","query":"Customers affected by incident 17","expected":["customer-7"]},
+  {"id":"q04","query":"Shipment fulfilling order 91","expected":["shipment-91"]},
+  {"id":"q05","query":"Business process affected by incident 17","expected":["checkout-process"]},
+  {"id":"q06","query":"Runtime impact source","expected":["payment-service"]},
+  {"id":"q07","query":"Orders linked to checkout process","expected":["order-91"]},
+  {"id":"q08","query":"Customers linked to checkout process","expected":["customer-7"]},
+  {"id":"q09","query":"Shipment linked to customer 7","expected":["shipment-91"]},
+  {"id":"q10","query":"Service leading to order 91","expected":["payment-service"]},
+  {"id":"q11","query":"Incident explanation root","expected":["incident-17"]},
+  {"id":"q12","query":"Affected commerce object","expected":["order-91"]},
+  {"id":"q13","query":"Affected fulfillment object","expected":["shipment-91"]},
+  {"id":"q14","query":"Affected customer object","expected":["customer-7"]},
+  {"id":"q15","query":"Process to customer path","expected":["customer-7"]},
+  {"id":"q16","query":"Service to shipment path","expected":["shipment-91"]},
+  {"id":"q17","query":"Incident to order path","expected":["order-91"]},
+  {"id":"q18","query":"Incident to customer path","expected":["customer-7"]},
+  {"id":"q19","query":"Order to shipment bridge","expected":["shipment-91"]},
+  {"id":"q20","query":"Full impact path endpoint","expected":["customer-7"]}
+]

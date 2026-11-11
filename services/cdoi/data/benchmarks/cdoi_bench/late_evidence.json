@@ -1,0 +1,19 @@
+[
+  {
+    "sequence_id": "late_bank_account",
+    "description": "Additional account evidence permits a later approved placement.",
+    "steps": [
+      {"evidence": ["label: Account"], "expected": "UNRESOLVED", "decisions": {"conservative": "UNRESOLVED", "aggressive": "EQUIVALENT"}},
+      {"evidence": ["hasBalance", "currency"], "expected": "UNRESOLVED", "decisions": {"conservative": "UNRESOLVED", "aggressive": "EQUIVALENT"}},
+      {"evidence": ["heldAt Bank", "ownedBy Customer"], "expected": "EQUIVALENT", "proposal": "BankAccount mapping", "validation": "valid", "review": "approved", "decisions": {"conservative": "EQUIVALENT", "aggressive": "EQUIVALENT"}}
+    ]
+  },
+  {
+    "sequence_id": "contradictory_service_type",
+    "description": "Conflicting type evidence routes to review instead of silently overwriting a source claim.",
+    "steps": [
+      {"evidence": ["Source A: SoftwareService"], "expected": "UNRESOLVED", "decisions": {"conservative": "UNRESOLVED", "aggressive": "EQUIVALENT"}},
+      {"evidence": ["Source B: BusinessService", "authority: none"], "expected": "REVIEW", "proposal": "conflicting type placement", "validation": "valid", "review": "pending", "decisions": {"conservative": "REVIEW", "aggressive": "EQUIVALENT"}}
+    ]
+  }
+]

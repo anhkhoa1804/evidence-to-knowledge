@@ -1,0 +1,17 @@
+{
+  "snapshot_version": "cdoi_v3_final_snapshot_2026_09_28_v1",
+  "repository": {"branch": "master", "head_at_audit_start": "f8ab90d7d9c601019e5ec1e37080f80558e4a2fd", "state": "DIRTY_BUT_FULLY_ACCOUNTED", "committed_release": false, "authority_order": "experiments/archive/v3_final_closure_20260928/AUTHORITY_ORDER.json"},
+  "gates": {"v3": "V3_FINAL_STATE_VERIFIED_WITH_RESIDUALS", "v4": "V4_ENTRY_AUTHORIZED_WITH_CONSTRAINTS", "ontology_relation": "ONTOLOGY_RELATION_DATA_SUPPORTED_SELECTION_PARTIAL", "rca_v24": "RCA_AGENT_RELIABILITY_PARTIALLY_SUPPORTED", "poc_v0": "CDOI_RCA_POC_V0_PARTIALLY_READY", "vdt": "VDT_DATA_NOT_READY_FOR_RCA_POC"},
+  "regression": {"collected": 319, "passed": 319, "failed": 0, "skipped": 0, "source": "experiments/archive/v3_final_closure_20260928/FINAL_REGRESSION.json"},
+  "ontology": {"retrieval_selection_commitment_separate": true, "relation_aware_status": "proposal_only_partial", "non_equivalence_auto_selection": false, "dense_qualified": false, "commitment_calibrated": false, "canonical_write_requires_review_version_gate": true},
+  "rca": {"version": "V2.4", "dataset_role": "CONSUMED_DEVELOPMENT_ONLY", "attempted": 12, "valid_hypotheses": 4, "valid_abstentions": 6, "technical_failures": 2, "top1": "4/12", "top3_hypothesis_only": "4/12", "independent_validation": false, "causal_proof": false},
+  "poc": {"version": "V0", "deterministic_cli_verified": true, "preflight_provider_invoked": false, "nonlive_unconfigured_status": "TECHNICAL_FAILURE", "preflight_public_status_caveat": "INSUFFICIENT_EVIDENCE wrapper explicitly marked PREFLIGHT_ONLY_NOT_A_SEMANTIC_ABSTENTION", "production_authorized": false},
+  "vdt": {"source_hashes_match_frozen": true, "incidents": 100, "valid_windows": 36, "exact_identity": 36, "aligned_logs": 0, "aligned_metrics": 0, "aligned_traces": 0, "aligned_changes": 0, "usable_topology": 36, "eligible_packages": 0, "governed_root_labels": false},
+  "enterprise_sources": {"coroot": "INTENDED_ROLE_DOCUMENTED_ACCESS_NOT_VERIFIED", "kibana": "INTENDED_ROLE_DOCUMENTED_ACCESS_NOT_VERIFIED", "bulk_acquisition": "NOT_STARTED"},
+  "security": {"current_mutable_text_literal_findings": 0, "local_ignored_env_exists": true, "secret_values_read_or_persisted_by_closure": false, "scan_scope_limited": true},
+  "archives": {"key_listed_hashes_verified": true, "phase2_13_untracked_extras": 5, "phase2_12": "ROOT_MANIFESTS_ONLY; PROTECTED_CASE_MATERIAL_NOT_OPENED"},
+  "active_blockers": ["No accepted aligned enterprise incident evidence package", "No governed VDT root-target labels", "Enterprise staging endpoint/access configuration unverified"],
+  "residual_risks": ["V2.4 real-case technical failure 2/12", "POC V0 preflight public-status overlap", "Dirty uncommitted worktree", "Phase 2.13 historical untracked extras", "Heuristic secret scan scope"],
+  "future_requirements": ["Independent RCA validation", "Non-equivalence ontology evidence", "Dense runtime qualification", "Commitment calibration", "Claim-level causal grounding assessment"],
+  "v4_entry": {"status": "V4_ENTRY_AUTHORIZED_WITH_CONSTRAINTS", "scope": "read-only governed enterprise evidence discovery and one deterministic vertical slice", "plan": "docs/V4_ENTRY_PLAN.md", "not_authorized": ["production RCA", "automatic remediation", "ontology commitment", "unreviewed KG mutation", "live model on unaccepted data"]}
+}

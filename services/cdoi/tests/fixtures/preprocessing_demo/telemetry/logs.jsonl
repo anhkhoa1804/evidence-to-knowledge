@@ -1,0 +1,4 @@
+{"timestamp":"2026-09-18T10:00:00Z","service_id":"payment-service","severity":"ERROR","event":"database connection timeout","trace_id":"trace-001"}
+{"timestamp":"2026-09-18T17:05:00+07:00","service_id":"order-service","severity":"WARN","event":"payment retry"}
+{"timestamp":"not-a-time","service_id":"payment-service","event":"bad timestamp"}
+{"timestamp":"2026-09-18T10:10:00Z","service_id":"unknown-service","event":"unmatched service"}

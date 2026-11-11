@@ -1,0 +1,6 @@
+{
+  "source_system": "network-inventory",
+  "concepts": [
+    {"id": "subscriber-role", "label": "Subscriber Role", "type_hint": "party role", "definition": "A role held by an external party subscribing to a network service.", "relations": ["uses(NetworkFunction)"]}
+  ]
+}

@@ -1,0 +1,11 @@
+[
+  {"id": "same-label-different-semantics", "kind": "class", "source": "finance:Settlement", "target": "logistics:Settlement", "expected": "UNRESOLVED"},
+  {"id": "bank-not-user", "kind": "class", "source": "finance:BankAccount", "target": "distributed:UserAccount", "expected": "UNRESOLVED"},
+  {"id": "pod-placement", "kind": "class", "source": "KubernetesPod", "target": "distributed:RuntimeEnvironment", "expected": "SUBCLASS_OF"},
+  {"id": "cold-chain-new", "kind": "class", "source": "ColdChainCheckpoint", "target": null, "expected": "NEW_CONCEPT"},
+  {"id": "party-role-compatible", "kind": "class", "source": "CustomerRole", "target": "core:PartyRole", "expected": "SUBCLASS_OF"},
+  {"id": "object-property", "kind": "object_property", "source": "fulfilledBy", "target": "bridge:fulfilledBy", "expected": "EQUIVALENT"},
+  {"id": "data-property", "kind": "data_property", "source": "hasOrderAmount", "target": null, "expected": "NEW_CONCEPT"},
+  {"id": "bridge", "kind": "bridge", "source": "commerce:CommerceOrder", "target": "logistics:Shipment", "expected": "BRIDGE"},
+  {"id": "unsafe-equivalence", "kind": "class", "source": "CustomerRole", "target": "telecom:SubscriberRole", "expected": "UNRESOLVED"}
+]

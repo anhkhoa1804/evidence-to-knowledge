@@ -1,0 +1,11 @@
+experiment_id: V265_SEMANTIC_CONFIDENCE_EVIDENCE
+dataset: oaei_anatomy
+task: oaei_semantic_confidence
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_SHARED_TOPK_CONFIDENCE_EVIDENCE_V1
+  validation_artifact: V265_QWEN_SEMANTIC_VALIDATION
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  top_k: 10
+  observable_reference_separation: required

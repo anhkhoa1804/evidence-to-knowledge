@@ -1,0 +1,17 @@
+experiment_id: V266_QWEN_PROFILE_ABLATION
+dataset: oaei_anatomy
+task: oaei_qwen_robustness
+random_seed: 266
+model_config:
+  protocol: OAEI_QWEN_PROFILE_ABLATION_V1
+  top_k: 10
+  sample_size: 30
+  seed: 266
+  max_attempts: 2
+  response_budget: 512
+  conditions:
+    - {condition_id: Q0_LABEL, family: ablation, order_kind: ORIGINAL, order_seed: 266, id_mode: OPAQUE_ID, profile_mode: Q0_LABEL, prompt_variant: P0_FROZEN}
+    - {condition_id: Q1_LABEL_ALIASES, family: ablation, order_kind: ORIGINAL, order_seed: 266, id_mode: OPAQUE_ID, profile_mode: Q1_LABEL_ALIASES, prompt_variant: P0_FROZEN}
+    - {condition_id: Q2_PARENT, family: ablation, order_kind: ORIGINAL, order_seed: 266, id_mode: OPAQUE_ID, profile_mode: Q2_PARENT, prompt_variant: P0_FROZEN}
+    - {condition_id: Q3_PARENT_CHILD, family: ablation, order_kind: ORIGINAL, order_seed: 266, id_mode: OPAQUE_ID, profile_mode: Q3_PARENT_CHILD, prompt_variant: P0_FROZEN}
+    - {condition_id: Q4_FULL, family: ablation, order_kind: ORIGINAL, order_seed: 266, id_mode: OPAQUE_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}

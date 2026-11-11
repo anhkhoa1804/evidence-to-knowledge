@@ -1,0 +1,4 @@
+[
+  {"case_id": "service_type_conflict", "sources": [{"source": "cmdb", "type": "SoftwareService", "authoritative": true}, {"source": "business_catalog", "type": "BusinessService", "authoritative": false}], "without_authority": "REVIEW", "with_authority": "SoftwareService"},
+  {"case_id": "customer_identity_conflict", "sources": [{"source": "crm", "type": "CustomerRole", "authoritative": true}, {"source": "billing", "type": "AccountHolder", "authoritative": false}], "without_authority": "REVIEW", "with_authority": "CustomerRole"}
+]

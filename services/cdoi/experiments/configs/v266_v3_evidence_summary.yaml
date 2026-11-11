@@ -1,0 +1,5 @@
+experiment_id: V266_V3_EVIDENCE_GATE
+dataset: oaei_anatomy
+task: oaei_v3_evidence_gate
+model_config:
+  protocol: OAEI_V3_EVIDENCE_GATE_V1

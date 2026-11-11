@@ -1,0 +1,11 @@
+experiment_id: OAEI_V263_PERSISTED_POSTRANKING
+dataset: oaei_anatomy
+task: oaei_postranking
+baseline: B0_LEXICAL
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_PERSISTED_SHARED_TOPK_POSTRANKING_V1
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  k_values: [5, 10]
+  scoring_mode: R2_LEXICAL_NEIGHBORHOOD_ON_FIXED_R1_TOPK

@@ -1,0 +1,7 @@
+experiment_id: CDOI_REAL_EMBEDDING
+dataset: cdoi_bench
+task: embedding
+baseline: B1_EMBEDDING
+model_config:
+  model_id: sentence-transformers/all-MiniLM-L6-v2
+random_seed: 42

@@ -1,0 +1,13 @@
+metric_id,timestamp,service_id,metric_name,value,unit,metric_kind,aggregation,sampling_interval,window_start,window_end,source_metric_name,environment,attributes
+m-001,2026-09-18T09:49:00Z,payment-service,request_latency,250,ms,gauge,avg,15s,,,http_request_duration,staging,"{""route"":""checkout""}"
+m-002,2026-09-18T09:50:00Z,payment-service,request_latency,300,ms,gauge,avg,15s,,,http_request_duration,staging,"{""route"":""checkout""}"
+m-003,2026-09-18T09:58:00Z,payment-service,request_latency,420,ms,gauge,avg,15s,2026-09-18T09:57:45Z,2026-09-18T09:58:00Z,http_request_duration,staging,"{""route"":""checkout""}"
+m-004,2026-09-18T09:59:00Z,payment-service,error_rate,0.18,ratio,gauge,raw,15s,,,errors_ratio,staging,
+m-005,2026-09-18T10:00:00Z,payment-service,requests_total,10420,count,counter,raw,60s,,,http_requests_total,staging,
+m-006,2026-09-18T10:10:00Z,payment-service,request_latency,500,ms,gauge,p95,15s,,,http_request_duration,staging,
+m-007,2026-09-18T10:11:00Z,payment-service,request_latency,520,ms,gauge,avg,15s,,,http_request_duration,staging,
+m-008,2026-09-18T10:05:00Z,order-service,queue_depth,11,count,gauge,raw,15s,,,queue_depth,staging,
+m-009,2026-09-18T10:00:00Z,unknown-service,cpu_utilization,0.3,ratio,gauge,raw,15s,,,cpu_utilization,staging,
+m-010,2026-09-18T09:58:30Z,payment-service,request_latency,1,bytes,gauge,avg,15s,,,request_latency_bytes,staging,
+m-011,2026-09-18T10:00:00Z,payment-service,request_latency,not-a-number,ms,gauge,avg,15s,,,http_request_duration,staging,
+m-012,2026-09-18T10:00:00Z,payment-service,custom_metric,12,widgets,gauge,raw,15s,,,custom_metric,staging,

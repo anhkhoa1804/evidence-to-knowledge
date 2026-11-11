@@ -1,0 +1,6 @@
+weights:
+  lexical: 0.45
+  embedding: 0.0
+  structural: 0.25
+  relation_signature: 0.30
+top_k: 5

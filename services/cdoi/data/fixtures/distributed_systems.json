@@ -1,0 +1,8 @@
+{
+  "source_system": "ops-cmdb",
+  "concepts": [
+    {"id": "pod-1", "label": "Kubernetes Pod", "type_hint": "runtime unit", "definition": "A deployable runtime unit in a container orchestration environment.", "relations": ["runsOn(Node)", "contains(Container)", "belongsTo(Deployment)"]},
+    {"id": "user-account", "label": "User Account", "type_hint": "identity account", "definition": "A credential-bearing identity record used to access an internal software service.", "relations": ["grantsAccess(SoftwareService)"]},
+    {"id": "ops-org", "label": "Organization", "type_hint": "organization", "definition": "An organized team responsible for operations.", "relations": []}
+  ]
+}

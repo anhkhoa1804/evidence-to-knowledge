@@ -1,0 +1,13 @@
+@prefix gist: <https://w3id.org/semanticarts/ns/ontology/gist/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+gist:Foundation a owl:Ontology ; rdfs:label "gist adapter subset" .
+gist:Organization a owl:Class ; rdfs:label "Organization" ; rdfs:comment "An organized group of people with a purpose." .
+gist:Person a owl:Class ; rdfs:label "Person" .
+gist:Event a owl:Class ; rdfs:label "Event" .
+gist:Service a owl:Class ; rdfs:label "Service" .
+gist:Agreement a owl:Class ; rdfs:label "Agreement" .
+gist:Place a owl:Class ; rdfs:label "Place" .
+gist:Artifact a owl:Class ; rdfs:label "Artifact" .
+gist:Category a owl:Class ; rdfs:label "Category" .

@@ -1,0 +1,12 @@
+terms:
+  - id: payment_gateway
+    label: Payment Gateway
+    definition: A service responsible for routing payment requests.
+    aliases:
+      - payment processor
+  - id: order_processing
+    label: Order Processing
+    definition: Processing customer orders.
+  - id: service_timeout
+    label: Service Timeout
+    definition: A timeout observed while a service waits for a dependency.

@@ -1,0 +1,21 @@
+{
+  "schema_version": "cdoi_rca_poc_v0",
+  "incident_id": "opaque-demo-001",
+  "environment": "staging",
+  "timezone": "UTC",
+  "source_systems": ["demo-operational-export"],
+  "exported_at": "2026-09-18T10:15:00Z",
+  "package_created_at": "2026-09-18T10:15:00Z",
+  "provenance": {
+    "source": "existing preprocessing demo fixture",
+    "role": "development POC demonstration only"
+  },
+  "sources": [
+    {"id": "service_inventory", "type": "service_inventory_csv", "path": "inventory/services.csv"},
+    {"id": "dependency_topology", "type": "dependency_jsonl", "path": "topology/dependencies.jsonl"},
+    {"id": "application_logs", "type": "log_jsonl", "path": "telemetry/logs.jsonl"},
+    {"id": "deployment_changes", "type": "deployment_change_csv", "path": "changes/deployments.csv"},
+    {"id": "service_metrics", "type": "metric_observation_csv", "path": "metrics/metrics.csv"},
+    {"id": "distributed_traces", "type": "trace_span_jsonl", "path": "traces/spans.jsonl"}
+  ]
+}

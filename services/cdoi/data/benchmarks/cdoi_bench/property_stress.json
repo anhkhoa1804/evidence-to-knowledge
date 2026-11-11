@@ -1,0 +1,8 @@
+[
+  {"case_id": "property_deployed_on", "kind": "object_property", "candidate": "deployedOn", "target": "hostedOn", "expected_relation": "EQUIVALENT", "signals": {"lexical": 0.58, "embedding": 0.82, "structural": 0.84, "domain": 0.72}},
+  {"case_id": "property_customer", "kind": "object_property", "candidate": "hasCustomer", "target": "ownedBy", "expected_relation": "EQUIVALENT", "signals": {"lexical": 0.42, "embedding": 0.76, "structural": 0.83, "domain": 0.68}},
+  {"case_id": "property_amount", "kind": "data_property", "candidate": "transactionAmount", "target": "paymentValue", "expected_relation": "EQUIVALENT", "signals": {"lexical": 0.44, "embedding": 0.79, "structural": 0.81, "domain": 0.65}},
+  {"case_id": "property_timestamp", "kind": "data_property", "candidate": "observedAt", "target": "eventTime", "expected_relation": "EQUIVALENT", "signals": {"lexical": 0.36, "embedding": 0.76, "structural": 0.84, "domain": 0.62}},
+  {"case_id": "property_false_friend", "kind": "object_property", "candidate": "belongsTo", "target": "ownedBy", "expected_relation": "UNRESOLVED", "must_not_equivalent": true, "signals": {"lexical": 0.62, "embedding": 0.84, "structural": 0.12, "domain": 0.08}},
+  {"case_id": "property_new", "kind": "data_property", "candidate": "temperatureCelsius", "target": null, "expected_relation": "NEW_CONCEPT", "context_relation": "NEW_CONCEPT", "signals": {"lexical": 0.12, "embedding": 0.21, "structural": 0.18, "domain": 0.42}}
+]

@@ -1,0 +1,12 @@
+experiment_id: CDOI_NOISE
+dataset: cdoi_bench
+task: noise
+baseline: B6_FULL_CDOI
+features:
+  relation_signature: true
+  domain_context: true
+  bridge_stage: true
+  conservative_policy: true
+  promotion: true
+noise_levels: [0, 5, 10, 20, 30]
+random_seed: 42

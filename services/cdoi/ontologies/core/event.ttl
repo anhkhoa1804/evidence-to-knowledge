@@ -1,0 +1,8 @@
+@prefix core: <https://example.org/vt/core/event/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+core:Ontology a owl:Ontology ; rdfs:label "Reusable event module" .
+core:OperationalEvent a owl:Class ; rdfs:label "Operational Event" .
+core:Observation a owl:Class ; rdfs:label "Observation" .
+core:Evidence a owl:Class ; rdfs:label "Evidence" .

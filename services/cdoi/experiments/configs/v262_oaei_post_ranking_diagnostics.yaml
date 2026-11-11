@@ -1,0 +1,12 @@
+experiment_id: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+dataset: oaei_anatomy
+task: oaei_diagnostics
+baseline: B0_LEXICAL
+external_root: data/benchmarks/external/oaei/anatomy-2026
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  retrieval_method: R1_FUZZY_LEXICAL
+  evidence_method: R2_LEXICAL_NEIGHBORHOOD
+  top_k: 20
+  threshold_grid: [0.50, 0.55, 0.60, 0.65, 0.70, 0.75, 0.78, 0.80, 0.82, 0.84, 0.86, 0.88, 0.90, 0.92, 0.95]

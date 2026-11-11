@@ -1,0 +1,15 @@
+experiment_id: V265_QWEN_IDENTICAL_PROMPT_CONSISTENCY
+dataset: oaei_anatomy
+task: oaei_qwen_consistency
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_QWEN_IDENTICAL_PROMPT_CONSISTENCY_V1
+  validation_artifact: V265_QWEN_SEMANTIC_VALIDATION
+  sample_strategy: first_20_difficult_cases_in_frozen_validation_order
+  sample_size: 20
+  repeat_count: 3
+  top_k: 10
+  prompt_variant: QSEM_COMPACT_PROFILE_V1
+  response_budget: 512
+  max_attempts: 2

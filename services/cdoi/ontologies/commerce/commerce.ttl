@@ -1,0 +1,7 @@
+@prefix com: <https://example.org/vt/commerce/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+com:Ontology a owl:Ontology .
+com:CommerceOrder a owl:Class ; rdfs:label "Commerce Order" .
+com:fulfillmentReference a owl:ObjectProperty ; rdfs:label "fulfillment reference" .

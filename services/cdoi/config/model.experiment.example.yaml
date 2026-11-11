@@ -1,0 +1,7 @@
+llm:
+  provider: openai-compatible
+  model: ${CDOI_LLM_MODEL}
+  base_url: ${CDOI_LLM_BASE_URL}
+  api_key_env: DMP_MERCURY
+  headers:
+    Host: ${CDOI_LLM_HOST_HEADER}

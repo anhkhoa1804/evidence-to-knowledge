@@ -1,0 +1,15 @@
+experiment_id: V266_QWEN_PROMPT_ROBUSTNESS
+dataset: oaei_anatomy
+task: oaei_qwen_robustness
+random_seed: 266
+model_config:
+  protocol: OAEI_QWEN_PROMPT_ROBUSTNESS_V1
+  top_k: 10
+  sample_size: 20
+  seed: 266
+  max_attempts: 2
+  response_budget: 512
+  conditions:
+    - {condition_id: P0_FROZEN, family: prompt, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN}
+    - {condition_id: P1_PARAPHRASE, family: prompt, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P1_PARAPHRASE}
+    - {condition_id: P2_INSTRUCTION_ORDER, family: prompt, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P2_INSTRUCTION_ORDER}

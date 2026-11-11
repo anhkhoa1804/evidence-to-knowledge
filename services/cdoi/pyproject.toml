@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cross-domain-ontology"
+version = "0.1.0"
+description = "Conservative continual cross-domain ontology integration prototype"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "pydantic>=2.7,<3",
+  "rdflib>=7.0,<8",
+  "PyYAML>=6.0,<7",
+  "python-dotenv>=1.0,<2",
+  "requests>=2.31,<3",
+]
+
+[project.optional-dependencies]
+validation = ["pyshacl>=0.26,<1"]
+models = ["sentence-transformers>=3,<6"]
+dev = ["pytest>=8.0,<9"]
+
+[project.scripts]
+cdoi = "cdoi.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools.packages.find]
+where = ["src"]

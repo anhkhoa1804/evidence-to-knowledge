@@ -1,0 +1,21 @@
+foundation_namespace: "https://w3id.org/semanticarts/ns/ontology/gist/"
+shared_namespace: "https://example.org/vt-shared/"
+domains:
+  distributed_systems:
+    namespace: "https://example.org/vt/distributed-systems/"
+    references: [gist]
+  telecom:
+    namespace: "https://example.org/vt/telecom/"
+    references: [gist]
+  finance:
+    namespace: "https://example.org/vt/finance/"
+    references: [gist, fibo]
+  fintech:
+    namespace: "https://example.org/vt/fintech/"
+    references: [gist]
+  logistics:
+    namespace: "https://example.org/vt/logistics/"
+    references: [gist, gs1_epcis]
+  commerce:
+    namespace: "https://example.org/vt/commerce/"
+    references: [gist]

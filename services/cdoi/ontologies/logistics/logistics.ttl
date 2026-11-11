@@ -1,0 +1,9 @@
+@prefix log: <https://example.org/vt/logistics/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+log:Ontology a owl:Ontology .
+log:Shipment a owl:Class ; rdfs:label "Shipment" .
+log:Parcel a owl:Class ; rdfs:label "Parcel" .
+log:DeliveryEvent a owl:Class ; rdfs:label "Delivery Event" .
+log:Settlement a owl:Class ; rdfs:label "Settlement" ; rdfs:comment "A named populated place used as a delivery destination." .

@@ -1,0 +1,11 @@
+experiment_id: continual_orders
+dataset: cdoi_bench
+task: continual_evolution
+baseline: B6_FULL_CDOI
+features:
+  relation_signature: true
+  domain_context: true
+  bridge_stage: true
+  conservative_policy: true
+  promotion: true
+random_seed: 42

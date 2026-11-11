@@ -1,0 +1,13 @@
+experiment_id: b3_structural
+dataset: cdoi_bench
+task: ontology_alignment
+baseline: B3_STRUCTURAL
+features:
+  lexical: true
+  relation_signature: true
+  domain_context: false
+  bridge_stage: false
+  conservative_policy: true
+  promotion: false
+random_seed: 42
+evaluation_metrics: [alignment_accuracy, false_merge_rate, subclass_placement_accuracy]

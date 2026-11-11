@@ -1,0 +1,32 @@
+field,group,provenance,label,evidence,notes
+contract_name,envelope,PROPOSED / OWNER_DECISION_REQUIRED,PROPOSED,No authoritative ExtractionPackage artifact found,Do not declare producer internal Document as public package
+contract_version,envelope,PROPOSED / OWNER_DECISION_REQUIRED,PROPOSED,No public version policy found,SemVer or other compatibility scheme requires owner decision
+producer_schema_version,run,P,P,Document.schema_version; current 1.4.0,Internal producer version only
+document_id,source,P,P,Document.document_id,Producer ID; documented content filename/hash-derived ID
+input_filename,source,P,P,RunMetadata.input_filename,Producer-native
+source_sha256,source,P,P,RunMetadata.file_hash_sha256,Hash of input bytes
+file_type,source,P,P,RunMetadata.file_type,Format identity
+extraction_status,run,P,P,RunMetadata.status,success/success_with_warnings/failed
+warnings,run,P,P,RunMetadata.warnings,Producer messages
+errors,run,P,P,RunMetadata.errors,Producer messages; failure is technical
+route_backend_model_versions,run,P,P,RunMetadata route/backend/model_versions,Available producer provenance; privacy/stability subset unresolved
+timestamp_runtime_config,run,P,P,RunMetadata timestamp/runtime_seconds/config_snapshot,Available but not identity; candidate inclusion needs minimization
+page_container_index,location,P,P,Page.index,Zero-based list position, not rendered page claim
+is_rendered_page,location,P,P,Page.is_rendered_page,Preserves logical vs rendered containers
+physical_page_number,location,P,P,Element.page_number / Table.page_number,Nullable one-based rendered page/slide/sheet per producer docs; DOCX null
+coordinate_system,location,P,P,Page.coordinate_unit / coordinate_origin / dpi,Unit and top-left origin; retain only when bbox present
+reading_order,location,P,P,Page.reading_order,Element ID ordering; empty semantics need owner decision
+element_id,element,P,P,Element.id,Unique within document; producer says stable across serialization
+element_type_text,element,P,P,Element.type / Element.text,Physical observed kind and text only
+element_bbox_confidence,element,P,P,Element.bbox / confidence,Backend may omit confidence/geometry
+source_span,consumer_reference,PROPOSED / OWNER_DECISION_REQUIRED,PROPOSED,Producer has format-specific physical locators and KP SourceReference.source_span is a string with a default,No approved mapping or cross-format locator grammar
+evidence_text,consumer_reference,K,K,Evidence.text,Existing KP evidence model field; StructuredExtractor uses explicit JSON evidence, not extracted package
+source_path,consumer_reference,K,K,SourceReference.source_path,Existing KP model field; public path/URI mapping and privacy unresolved
+source_system,consumer_reference,PROPOSED / OWNER_DECISION_REQUIRED,PROPOSED,SourceReference.source_system defaults to fixture and producer emits backend/route fields instead,No approved source-system vocabulary or mapping
+table_id_grid,table,P,P,Element.table_id and Page.tables/Table.id,Table linked from element; same-page reference
+table_dimensions_cells,table,P,P,Table.n_rows/n_cols and Cell row/col/spans/text/header,Cell has no stable ID
+cell_reference,table_cell,D,D,Deterministically derive from table ID plus row/col,Only if owner approves encoding and semantic stability
+physical_cell_bbox,table_cell,P,P,Cell.bbox,May be null by backend
+canonical_entity_id,semantic,FORBIDDEN,FORBIDDEN,KP ontology/identity authority,Not extraction data
+ontology_class,semantic,FORBIDDEN,FORBIDDEN,KP semantic authority,Not extraction data
+approved_relation,semantic,FORBIDDEN,FORBIDDEN,KP review/canonical KG authority,Not extraction data

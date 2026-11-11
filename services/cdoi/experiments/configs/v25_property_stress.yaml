@@ -1,0 +1,9 @@
+experiment_id: CDOI_PROPERTY_STRESS
+dataset: cdoi_property_stress
+task: property_stress
+baseline: B6_FULL_CDOI
+features:
+  relation_signature: true
+  domain_context: true
+  conservative_policy: true
+random_seed: 42

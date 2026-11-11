@@ -1,0 +1,18 @@
+experiment_id: V264_QWEN_COMPACT_SHARED_TOPK_SEMANTIC
+dataset: oaei_anatomy
+task: oaei_qwen_semantic
+baseline: B0_LEXICAL
+random_seed: 264
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_QWEN_COMPACT_SHARED_TOPK_SEMANTIC_V1
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  top_k: 10
+  sample_strategy: deterministic_stratified_round_robin
+  sample_size: 50
+  seed: 264
+  prompt_variant: QSEM_COMPACT_PROFILE_V1
+  schema_version: candidate_id_relation_v1
+  response_budget: 512
+  max_attempts: 2

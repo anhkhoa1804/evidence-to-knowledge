@@ -1,0 +1,7 @@
+@prefix tel: <https://example.org/vt/telecom/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+tel:Ontology a owl:Ontology .
+tel:NetworkFunction a owl:Class ; rdfs:label "Network Function" .
+tel:NetworkResource a owl:Class ; rdfs:label "Network Resource" .

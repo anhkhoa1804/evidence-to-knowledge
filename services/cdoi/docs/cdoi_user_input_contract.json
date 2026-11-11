@@ -1,0 +1,112 @@
+{
+  "$schema_note": "Documentation index only; this is not a JSON Schema or ingestion API.",
+  "status_vocabulary": [
+    "IMPLEMENTED",
+    "IMPLEMENTED_FOR_DIAGNOSTIC_ONLY",
+    "PARTIALLY_IMPLEMENTED",
+    "CONFIGURATION_REQUIRED",
+    "DATA_REQUIRED",
+    "RUNTIME_BLOCKED",
+    "NOT_IMPLEMENTED",
+    "RESEARCH_HYPOTHESIS"
+  ],
+  "runtime_entrypoint": {
+    "command": "cdoi ingest DOMAIN PATH",
+    "consumer": "ContinualIntegrationPipeline.ingest",
+    "accepted_source": {
+      "format": "UTF-8 JSON only",
+      "root": "object",
+      "meaningful_ingest_field": "concepts",
+      "concept_record": {
+        "required": ["label"],
+        "optional": ["id", "definition", "type_hint", "relations"],
+        "relation_convention": "predicate(Target)"
+      }
+    },
+    "domain": {
+      "required": true,
+      "allowed_values": [
+        "distributed_systems",
+        "telecom",
+        "finance",
+        "fintech",
+        "logistics",
+        "commerce"
+      ],
+      "provisioning": "Hard-coded in OntologyStore.load_defaults; config/domains.yaml is not consumed by ingest.",
+      "unknown_domain_behavior": "KeyError"
+    }
+  },
+  "preview_only_preprocessing": {
+    "command": "cdoi preprocess PATH",
+    "formats": {
+      "json": "JSON leaves",
+      "markdown": "heading-aware paragraphs",
+      "other_text": "blank-line paragraphs"
+    },
+    "runtime_extraction_note": "StructuredExtractor extracts only JSON concept records; Markdown/text chunks do not become entities."
+  },
+  "runtime_derivations": [
+    "ClassCandidate from distinct label/type_hint observations",
+    "ObjectPropertyCandidate or DataPropertyCandidate from relation-name strings",
+    "Token-based semantic features and limited hard-coded label cues",
+    "Local retrieval/alignment proposals and validation/review states",
+    "Approved class type assertions only after ontology version approval"
+  ],
+  "must_not_claim_as_inferred": [
+    "New domain module or namespace",
+    "Business role or identity semantics from labels/fields",
+    "Primary keys, foreign keys, cardinality, nullability, domain/range",
+    "Trusted authority or customer business rules",
+    "Cross-domain equivalence from lexical similarity",
+    "owl:sameAs from weak identity evidence",
+    "Production RCA/application readiness"
+  ],
+  "provenance": {
+    "persisted": [
+      "source_path",
+      "source_span",
+      "hierarchy where preprocessing supplies it",
+      "input_domain",
+      "extractor model/version",
+      "timestamp",
+      "run_id",
+      "proposal/version state"
+    ],
+    "gaps": [
+      "source_system defaults to fixture and input root source_system is ignored",
+      "original records/values, record timestamps, ontology source version, and reviewer rationale are not guaranteed"
+    ]
+  },
+  "evaluation_only": {
+    "inputs": [
+      "data/benchmark/gold.json",
+      "CDOI-Bench dev/test",
+      "OAEI reference.rdf",
+      "OET/RCAEval normalized cases"
+    ],
+    "rule": "Never use as normal ingest input or runtime alignment evidence."
+  },
+  "infrastructure_not_customer_data": {
+    "environment_keys": [
+      "CDOI_LLM_PROVIDER",
+      "CDOI_LLM_MODEL",
+      "CDOI_LLM_BASE_URL",
+      "CDOI_LLM_API_KEY_ENV",
+      "CDOI_LLM_HOST_HEADER",
+      "CDOI_LLM_TEMPERATURE",
+      "CDOI_LLM_MAX_TOKENS"
+    ],
+    "default": "Offline deterministic ingest; no LLM/embedding dependency."
+  },
+  "application_status": {
+    "canonical_output": "Approved class type assertions in data/outputs/knowledge_graph.ttl after export_kg().",
+    "staging_output": "Unapproved class type assertions in data/outputs/staging_knowledge_graph.ttl.",
+    "not_general_application_runtime": [
+      "RCA",
+      "cross-domain search",
+      "impact analysis",
+      "semantic query"
+    ]
+  }
+}

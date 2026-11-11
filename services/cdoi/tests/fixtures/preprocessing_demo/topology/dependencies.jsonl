@@ -1,0 +1,3 @@
+{"source_id":"order-service","relation":"calls","target_id":"payment-service"}
+{"source_id":"payment-service","relation":"reads_from","target_id":"database-service"}
+{"source_id":"order-service","relation":"calls","target_id":"unknown-service"}

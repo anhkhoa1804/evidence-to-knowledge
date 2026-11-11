@@ -1,0 +1,8 @@
+{
+  "source_system": "core-banking",
+  "concepts": [
+    {"id": "bank-account", "label": "Bank Account", "type_hint": "financial account", "definition": "A deposit account maintained by a financial institution.", "relations": ["heldBy(Customer)"]},
+    {"id": "customer-role", "label": "Customer Role", "type_hint": "party role", "definition": "A role held by an external party in a financial service relationship.", "relations": ["participatesIn(FinancialTransaction)"]},
+    {"id": "trade-execution", "label": "Trade Execution", "type_hint": "event", "definition": "The execution event of a financial trade.", "relations": ["settles(FinancialTransaction)"]}
+  ]
+}

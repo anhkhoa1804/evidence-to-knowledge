@@ -1,0 +1,11 @@
+experiment_id: V266_QWEN_FAILURE_DIAGNOSTIC
+dataset: oaei_anatomy
+task: oaei_qwen_failure_diagnostic
+model_config:
+  protocol: OAEI_QWEN_FAILURE_RECHECK_V1
+  top_k: 10
+  max_attempts: 2
+  response_budget: 512
+  conditions:
+    - {condition_id: FAILED_512, family: failure_budget, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN, response_budget: 512}
+    - {condition_id: FAILED_1024, family: failure_budget, order_kind: ORIGINAL, order_seed: 266, id_mode: ORIGINAL_ID, profile_mode: Q4_FULL, prompt_variant: P0_FROZEN, response_budget: 1024}

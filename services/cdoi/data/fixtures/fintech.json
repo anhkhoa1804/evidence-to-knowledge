@@ -1,0 +1,7 @@
+{
+  "source_system": "payments-api",
+  "concepts": [
+    {"id": "payer-role", "label": "Payer Role", "type_hint": "party role", "definition": "A role held by an external party initiating a payment.", "relations": ["initiates(PaymentOrder)"]},
+    {"id": "tokenized-wallet", "label": "Tokenized Wallet", "type_hint": "wallet", "definition": "A payment wallet represented by a payment token.", "relations": ["contains(PaymentAccount)"]}
+  ]
+}

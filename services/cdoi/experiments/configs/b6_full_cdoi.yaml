@@ -1,0 +1,16 @@
+experiment_id: b6_full_cdoi
+dataset: cdoi_bench
+task: ontology_alignment
+baseline: B6_FULL_CDOI
+features:
+  lexical: true
+  embeddings: true
+  definitions: true
+  relation_signature: true
+  ontology_neighborhood: true
+  domain_context: true
+  bridge_stage: true
+  conservative_policy: true
+  promotion: true
+random_seed: 42
+evaluation_metrics: [alignment_accuracy, false_merge_rate, bridge_precision, promotion_precision]

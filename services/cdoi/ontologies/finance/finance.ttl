@@ -1,0 +1,8 @@
+@prefix fin: <https://example.org/vt/finance/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+fin:Ontology a owl:Ontology .
+fin:BankAccount a owl:Class ; rdfs:label "Bank Account" ; rdfs:comment "A deposit account maintained by a financial institution." .
+fin:FinancialTransaction a owl:Class ; rdfs:label "Financial Transaction" .
+fin:Settlement a owl:Class ; rdfs:label "Settlement" ; rdfs:comment "Completion of financial obligations between counterparties." .

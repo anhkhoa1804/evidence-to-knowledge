@@ -1,0 +1,19 @@
+experiment_id: V265_QWEN_SEMANTIC_VALIDATION
+dataset: oaei_anatomy
+task: oaei_qwen_validation
+baseline: B0_LEXICAL
+random_seed: 265
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_QWEN_COMPACT_SHARED_TOPK_VALIDATION_V1
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  top_k: 10
+  sample_strategy: V265_pre_inference_stratified_round_robin
+  sample_size: 150
+  seed: 265
+  sampling_priority: [rank1_threshold_abstention, gold_rank_2_5, gold_rank_6_10, r2_failure, margin_lt_0_05, margin_0_05_0_10, nontrivial_remaining, easy_control]
+  prompt_variant: QSEM_COMPACT_PROFILE_V1
+  schema_version: candidate_id_relation_v1
+  response_budget: 512
+  max_attempts: 2

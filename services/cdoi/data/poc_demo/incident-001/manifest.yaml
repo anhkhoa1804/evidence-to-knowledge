@@ -1,0 +1,25 @@
+dataset_id: demo_rca_001
+environment: staging
+timezone: Asia/Ho_Chi_Minh
+sources:
+  - id: service_inventory
+    type: service_inventory_csv
+    path: inventory/services.csv
+  - id: dependency_topology
+    type: dependency_jsonl
+    path: topology/dependencies.jsonl
+  - id: application_logs
+    type: log_jsonl
+    path: telemetry/logs.jsonl
+  - id: deployment_changes
+    type: deployment_change_csv
+    path: changes/deployments.csv
+  - id: service_metrics
+    type: metric_observation_csv
+    path: metrics/metrics.csv
+  - id: distributed_traces
+    type: trace_span_jsonl
+    path: traces/spans.jsonl
+  - id: business_glossary
+    type: glossary_yaml
+    path: semantics/glossary.yaml

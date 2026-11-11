@@ -1,0 +1,4 @@
+service=payment-service
+node=node-7
+
+status=degraded

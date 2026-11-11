@@ -1,0 +1,10 @@
+experiment_id: CDOI_LLM_CONTEXT
+dataset: cdoi_bench
+task: llm
+baseline: B6_FULL_CDOI
+model_config:
+  base_url: https://example.invalid/v1
+  model: configured-model
+  api_key_env: CDOI_LLM_API_KEY
+  prompt_conditions: [P0, P1, P2, P3]
+random_seed: 42

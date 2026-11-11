@@ -1,0 +1,7 @@
+{
+  "source_system": "commerce-order-api",
+  "concepts": [
+    {"id": "order-1007", "label": "Commerce Order", "type_hint": "business order", "definition": "A customer purchase request awaiting fulfillment.", "relations": ["fulfilledBy(Shipment)", "hasOrderAmount(Amount)"]},
+    {"id": "customer-123", "label": "Customer Role", "type_hint": "party role", "definition": "A role held by an external party placing an order.", "relations": ["places(CommerceOrder)"]}
+  ]
+}

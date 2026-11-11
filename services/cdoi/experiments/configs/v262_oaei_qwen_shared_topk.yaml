@@ -1,0 +1,12 @@
+experiment_id: OAEI_QWEN_SHARED_TOPK_R1
+dataset: oaei_anatomy
+task: oaei_qwen_shared_topk
+baseline: B0_LEXICAL
+external_root: data/benchmarks/external/oaei/anatomy-2026
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  retrieval_method: R1_FUZZY_LEXICAL
+  top_k: 5
+  sample_size: 8
+  max_attempts: 2

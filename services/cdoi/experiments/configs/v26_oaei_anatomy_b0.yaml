@@ -1,0 +1,7 @@
+experiment_id: EXT_OAEI_ANATOMY_B0
+dataset: oaei_anatomy_2026
+task: external_alignment
+baseline: B0_LEXICAL
+features: {}
+external_root: data/benchmarks/external/oaei/anatomy-2026
+random_seed: 42

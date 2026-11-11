@@ -1,0 +1,10 @@
+experiment_id: EXT_OAEI_B6
+dataset: oaei
+task: external_alignment
+baseline: B6_FULL_CDOI
+features:
+  relation_signature: true
+  domain_context: true
+  conservative_policy: true
+external_root: data/benchmarks/external/oaei
+random_seed: 42

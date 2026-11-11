@@ -1,0 +1,17 @@
+# ExtractionPackage v1 owner decisions
+
+The measured consumer is KP integration HEAD `5ef7507c2466ee36287bb4f304886d161daa575a`, based on the live-verified Bitbucket contract base `eeb41c720f79e54f255643fa00b8b4f2cf1ba7c3`. Decisions below distinguish the measured gate from broader release policy.
+
+| Topic | Evidence | Current classification | Decision / remaining owner action |
+|---|---|---|---|
+| Header flag | Extraction marks first-row cells `is_header`; KP v1 ignores that value and uses `cell.row == 0`. | `PRIVATE / DEFERRED FOR CURRENT KP V1` | Keep out of the minimum profile. Limitation: non-row-0 and multi-level headers are not established. Do not claim broader header semantics without a policy change. |
+| Coordinate origin | Extraction defines top-left/y-down; KP retains bbox values/unit without origin. Current KP evidence and semantic code cite page/table/cell locators and do not calculate with bbox. | `PRIVATE / DEFERRED FOR CURRENT KP V1` | Keep out of the minimum profile. Bbox-level spatial reconstruction is unsupported. Add an invariant/field only before a consumer depends on geometry. |
+| Object-to-provenance attribution | Same real extraction run produced text as `pymupdf-native` and table as `pymupdf_tables`; ExtractionPackage 1.1.0 references accepted objects to operation steps; KP Why evidence preserves the resolved object list. | `IMPLEMENTED AND MEASURED FOR CPU PDF CASES` | Gate requirement met for measured native text/table objects. Multi-ref support is synthetic-only; no OCR fusion claim. |
+| Provenance model ownership | Producer canonical IR stores a backend per element/table and none on cells. Private `ObservationLedger` remains opt-in evaluation instrumentation, not the public contract. | `IMPLEMENTED MINIMAL PROJECTION` | Contract contains accepted evidence steps and object refs only. The projection does not copy the research ledger, rejected candidates, or internal arbitration state. |
+| Run ID lifecycle | Producer projection takes caller-supplied ID; KP requires it. Local IDs were explicit test harness values. | `PRODUCTION OPERATIONAL DECISION; NOT A MEASURED GATE FAILURE` | Name the production caller and uniqueness/retry policy before release. |
+| Warning / failure behavior | Both real PDFs emitted warning `text_quality: insufficient_text`; package marks WARNING and KP retains detail. Producer errors are rejected; KP fatal package test raises `EXTRACTION_PACKAGE_FAILED`. | `QUALIFIED FOR WARNING + FATAL CONTROL; PARTIAL NOT QUALIFIED` | Generic warning code works for measured warnings; define taxonomy if consumers need machine actions. Keep partial/nonfatal error behavior unsupported until specified. |
+| Source hash | Both package digests equal SHA-256 of original file bytes. | `RESOLVED` | Keep original-input byte scope. |
+| Cell identity | Producer has no native cell ID; table ID plus row/column is stable and KP validates it. | `DERIVED_DETERMINISTIC` | Keep `<table_id>:r<row>:c<column>`. |
+| Incomplete reading order | Producer list storage order is not an ordering claim. | `FAIL CLOSED` | V2 exporter rejects `INCOMPLETE_READING_ORDER`. |
+
+The measured gate passes with `DocumentExtractionContract 1.1.0`. Run-level backend `baseline` remains distinct from object-level backend attribution. Remaining owner decisions are the production run-ID allocator and broader partial-error policy; neither blocked this two-PDF interop gate.

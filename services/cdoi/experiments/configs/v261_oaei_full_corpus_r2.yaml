@@ -1,0 +1,10 @@
+experiment_id: OAEI_FULL_CORPUS_R2_LEXICAL_CONTEXT
+dataset: oaei_anatomy
+task: oaei_full_corpus
+baseline: B3_STRUCTURAL
+external_root: data/benchmarks/external/oaei/anatomy-2026
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  retrieval_method: R2_LEXICAL_NEIGHBORHOOD
+  top_k: 20

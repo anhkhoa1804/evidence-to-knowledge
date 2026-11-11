@@ -1,0 +1,12 @@
+experiment_id: V26_QWEN_ALIGNMENT
+dataset: cdoi_bench
+task: llm
+baseline: B6_FULL_CDOI
+model_config:
+  api_key_env: DMP_MERCURY
+  modes:
+    B4_LLM_ONLY: P0
+    B5_RETRIEVAL_QWEN: P2
+    B6Q_FULL_CONTEXT_QWEN: P3
+    B7_SELECTIVE_QWEN: P3
+random_seed: 42

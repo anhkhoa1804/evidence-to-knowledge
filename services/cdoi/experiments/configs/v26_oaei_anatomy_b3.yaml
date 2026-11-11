@@ -1,0 +1,8 @@
+experiment_id: EXT_OAEI_ANATOMY_B3
+dataset: oaei_anatomy_2026
+task: external_alignment
+baseline: B3_STRUCTURAL
+features:
+  relation_signature: true
+external_root: data/benchmarks/external/oaei/anatomy-2026
+random_seed: 42

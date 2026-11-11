@@ -1,0 +1,13 @@
+experiment_id: OAEI_V263_QWEN_COMPACT_RELIABILITY
+dataset: oaei_anatomy
+task: oaei_qwen_reliability
+thresholds:
+  emit_threshold: 0.82
+model_config:
+  protocol: OAEI_QWEN_STRUCTURED_RELIABILITY_V1
+  candidate_artifact: OAEI_POST_RANKING_DIAGNOSTICS_R1_R2
+  sample_strategy: deterministic_source_order_microbenchmark
+  sample_size: 2
+  top_k: 5
+  prompt_variant: QREL_COMPACT_V1
+  response_budgets: [512, 1024]

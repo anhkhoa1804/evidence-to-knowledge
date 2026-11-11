@@ -1,0 +1,6 @@
+experiment_id: RCA_FULL_CDOI
+dataset: rcaeval
+task: external_rca
+baseline: B6_FULL_CDOI
+external_root: data/benchmarks/external/rcaeval
+random_seed: 42

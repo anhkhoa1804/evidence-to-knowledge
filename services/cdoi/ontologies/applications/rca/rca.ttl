@@ -1,0 +1,10 @@
+@prefix rca: <https://example.org/rca/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+rca:Ontology a owl:Ontology .
+rca:RootCauseHypothesis a owl:Class ; rdfs:label "Root Cause Hypothesis" .
+rca:CandidateCause a owl:Class ; rdfs:label "Candidate Cause" .
+rca:Symptom a owl:Class ; rdfs:label "Symptom" .
+rca:Evidence a owl:Class ; rdfs:label "Evidence" .
+rca:IncidentContext a owl:Class ; rdfs:label "Incident Context" .

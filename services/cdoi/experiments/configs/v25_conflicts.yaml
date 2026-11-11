@@ -1,0 +1,5 @@
+experiment_id: CDOI_CONFLICTS
+dataset: cdoi_conflicts
+task: conflicts
+baseline: B6_FULL_CDOI
+random_seed: 42
