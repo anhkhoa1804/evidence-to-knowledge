@@ -1,4 +1,22 @@
-# doc-extraction
+# Evidence-to-Knowledge
+
+Infrastructure for turning heterogeneous enterprise documents and operational
+data into traceable evidence, and that evidence into reviewed, versioned
+knowledge that AI applications can use.
+
+| Component | Path | What it does |
+|---|---|---|
+| **doc-extraction** | [`src/doc_extraction/`](src/doc_extraction/) | Evidence layer: deterministic physical extraction from PDF, DOCX, XLSX, PPTX and scanned images into a canonical IR with provenance. Documented in the rest of this README. |
+| **CDOI** | [`services/cdoi/`](services/cdoi/) | Knowledge layer: Cross-Domain Continual Ontology Integration. Evidence-backed schema induction, ontology alignment, bridge mappings, review gates, versioning and canonical/staging KG population, plus RCA evidence research. See [its README](services/cdoi/README.md). |
+| **web-acquisition** | [`services/web-acquisition/`](services/web-acquisition/) | URL discovery and content acquisition. |
+| **Edge-cases series** | [`docs/articles/edge-cases-series/`](docs/articles/edge-cases-series/) | *The Edge Cases of Intelligent Knowledge Systems*: a six-part literature synthesis on retrieval, reasoning and trust in enterprise AI. |
+
+Each component has its own `pyproject.toml` and test suite. The two are
+connected through an explicit extraction contract (`ExtractionPackage`), not
+shared imports; see
+[`services/cdoi/LIVE_EXTRACTION_KP_INTEROP_REPORT.md`](services/cdoi/LIVE_EXTRACTION_KP_INTEROP_REPORT.md).
+
+## doc-extraction
 
 A modular document-extraction component for structured content from
 heterogeneous enterprise documents (PDF, DOCX, XLSX, PPTX, scanned images).
@@ -12,13 +30,16 @@ optimization, not a requirement, and produces identical output.
 
 - [Evidence-to-Knowledge Infrastructure for Enterprise AI (PDF, 38 pages, 2026)](docs/reports/Evidence-to-Knowledge-Infrastructure-for-Enterprise-AI.pdf):
   a talk on turning enterprise documents into traceable evidence, then approved knowledge that AI applications can use.
+- [The Edge Cases of Intelligent Knowledge Systems (slides)](https://claude.ai/artifact/KkKoHDKecpVtfVseroEKry):
+  the talk version of the [article series](docs/articles/edge-cases-series/).
 
 ## Scope
 
-This repository provides deterministic physical document extraction with a
-documented canonical IR, explicit routing, provenance, warnings, and
-intermediate diagnostics. It does not perform ontology, entity, relation, or
-business-workflow reasoning. Historical investigations are retained under
+The `doc_extraction` package provides deterministic physical document
+extraction with a documented canonical IR, explicit routing, provenance,
+warnings, and intermediate diagnostics. It does not perform ontology, entity,
+relation, or business-workflow reasoning; that layer is
+[CDOI](services/cdoi/). Historical investigations are retained under
 [`experiments/`](experiments/) but are not part of the production runtime; see
 [`docs/production-boundary.md`](docs/production-boundary.md).
 
@@ -95,6 +116,8 @@ benchmarks/           Manifests and report generators for OmniDocBench-style eva
 research/             Hard-case corpus generator and research artifacts
 experiments/          Numbered investigations, each with its configs, scripts and results
 services/web-acquisition/  Independent URL discovery and content-acquisition service (own pyproject)
+services/cdoi/        CDOI knowledge-integration layer: ontology/KG pipeline, RCA evidence research (own pyproject)
+docs/articles/        The Edge Cases of Intelligent Knowledge Systems article series
 scripts/              Operator and maintenance scripts
 docs/                 Architecture, setup, backend and output-format documentation
 data/, outputs/       Local-only inputs and run outputs (git-ignored; see data/README.md)
