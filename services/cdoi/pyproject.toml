@@ -19,7 +19,7 @@ dependencies = [
 [project.optional-dependencies]
 validation = ["pyshacl>=0.26,<1"]
 models = ["sentence-transformers>=3,<6"]
-dev = ["pytest>=8.0,<9"]
+dev = ["pytest>=8.0,<9", "pyarrow>=14"]
 
 [project.scripts]
 cdoi = "cdoi.cli:main"

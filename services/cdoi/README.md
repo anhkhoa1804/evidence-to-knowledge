@@ -19,6 +19,9 @@ The system is intentionally conservative. Candidate matches are evidence, not fa
 
 ## Run
 
+All commands run from this directory (`services/cdoi/`); CDOI is installed and
+tested independently of the `doc_extraction` package at the repository root.
+
 ```powershell
 python -m venv .venv
 python -m pip --python .\.venv\Scripts\python.exe install -e ".[dev,validation]"
@@ -27,6 +30,8 @@ python -m pip --python .\.venv\Scripts\python.exe install -e ".[dev,validation]"
 ```
 
 The default demo has no credentials, GPU, or remote-model dependency. It writes run journals under `data/integration_runs`, immutable snapshots/deltas under `data/ontology_versions`, the canonical KG at `data/outputs/knowledge_graph.ttl`, and pending/rejected facts at `data/outputs/staging_knowledge_graph.ttl`. These local outputs are excluded from Git; `.env.example` documents optional gateway settings without secrets.
+
+On a clean checkout, tests that verify frozen run archives (`experiments/archive/`, `experiments/outputs/`) or licensed external corpora (`data/benchmarks/external/`) are reported as skipped: those paths are deliberately git-ignored, so the artifacts exist only on the machine that produced them.
 
 For a first orientation, read [the architecture](ARCHITECTURE.md), then [the V3 architecture](docs/V3_ARCHITECTURE.md). For benchmark data that is not stored in Git, follow [the external-data setup guide](data/benchmarks/external/README.md).
 
